@@ -11,4 +11,9 @@ pip install -r requirements.txt
 ### Train & Infer
 
 ```bash
-python
+python train.py
+```
+
+```bash
+python infer.py
+```
