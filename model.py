@@ -7,7 +7,8 @@ from sklearn.metrics import accuracy_score
 
 
 class CoLAModel(pl.LightningModule):
-    def __init__(self, model_name="google/bert_uncased_L-2_H-128_A-2", lr=1e-2):
+    def __init__(self, model_name="google/bert_uncased_L-2_H-128_A-2",
+                 lr=1e-2):
         super().__init__()
         self.save_hyperparameters()
 
