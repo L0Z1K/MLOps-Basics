@@ -29,5 +29,5 @@ class CoLAPredictor:
 
 if __name__ == "__main__":
     sentence = "The boy is sitting on a bench"
-    predictor = CoLAPredictor("./models/epoch=1-step=535.ckpt")
+    predictor = CoLAPredictor("./models/epoch=3-step=1071.ckpt")
     print(predictor.predict(sentence))
