@@ -18,7 +18,7 @@ class DataModule(pl.LightningDataModule):
         self.train_data = cola_dataset["train"]
         self.val_data = cola_dataset["validation"]
     
-    def tokenizer_data(self, example):
+    def tokenize_data(self, example):
         return self.tokenizer(
             example["sentence"],
             truncation=True,
@@ -31,6 +31,12 @@ class DataModule(pl.LightningDataModule):
             self.train_data = self.train_data.map(self.tokenize_data,
                                                   batched=True)
             self.train_data.set_format(
+                type="torch", columns=["input_ids", "attention_mask", "label"]
+            )
+
+            self.val_data = self.val_data.map(self.tokenize_data,
+                                              batched=True)
+            self.val_data.set_format(
                 type="torch", columns=["input_ids", "attention_mask", "label"]
             )
     
