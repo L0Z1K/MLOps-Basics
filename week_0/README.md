@@ -16,4 +16,6 @@ python train.py
 
 ```bash
 python infer.py
+Input the sentence for inference: A girl is eating the candy.
+[{'label': 'unacceptable', 'score': 0.30912938714027405}, {'label': 'acceptable', 'score': 0.6908706426620483}]
 ```

@@ -28,6 +28,6 @@ class CoLAPredictor:
 
 
 if __name__ == "__main__":
-    sentence = "The boy is sitting on a bench"
+    sentence = input("Input the sentence for inference: ")
     predictor = CoLAPredictor("./models/epoch=3-step=1071.ckpt")
     print(predictor.predict(sentence))
