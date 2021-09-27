@@ -13,10 +13,13 @@ def main():
     cola_model = CoLAModel()
 
     checkpoint_callback = ModelCheckpoint(
-        dirpath="./models", monitor="val_loss", mode="min"
+        dirpath="./models",
+        filename="best.ckpt",
+        monitor="valid/loss",
+        mode="min"
     )
     early_stopping_callback = EarlyStopping(
-        monitor="val_loss", patience=3, verbose=True, mode="min"
+        monitor="valid/loss", patience=3, verbose=True, mode="min"
     )
 
     wandb_logger = WandbLogger(project="MLOps Basics",
@@ -29,8 +32,11 @@ def main():
         max_epochs=5,
         fast_dev_run=False,
         logger=wandb_logger,
-        callbacks=[checkpoint_callback, early_stopping_callback],
+        callbacks=[checkpoint_callback,
+                   early_stopping_callback],
+        log_every_n_steps=10,
     )
+
     trainer.fit(cola_model, cola_data)
 
 
