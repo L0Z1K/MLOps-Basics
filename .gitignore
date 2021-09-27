@@ -147,3 +147,4 @@ cython_debug/
 .vscode
 logs/
 models/
+wandb/
