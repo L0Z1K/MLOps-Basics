@@ -7,3 +7,5 @@
 ```bash
 python train.py
 ```
+
+Wandb 결과물은 [여기](https://wandb.ai/sybaek/MLOps%20Basics/runs/1o4di8rc/overview?workspace=user-sybaek)에서 확인 가능하다.
