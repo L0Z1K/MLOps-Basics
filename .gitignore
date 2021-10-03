@@ -148,3 +148,4 @@ cython_debug/
 logs/
 models/
 wandb/
+outputs/
