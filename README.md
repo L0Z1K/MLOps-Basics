@@ -13,3 +13,4 @@ MLOps 초짜인 제가 MLOps 공부하기에 괜찮은 커리큘럼을 발견하
 **Week 1: Model monitoring - Weights and Biases** (Completed)
 
 **Week 2: Configurations - Hydra** (Completed)
+
