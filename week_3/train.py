@@ -14,31 +14,26 @@ from model import CoLAModel
 logger = logging.getLogger(__name__)
 
 
-@hydra.main(config_path='./configs', config_name='config')
+@hydra.main(config_path="./configs", config_name="config")
 def main(cfg):
     logger.info(OmegaConf.to_yaml(cfg, resolve=True))
     logger.info(f"Using the model: {cfg.model.name}")
     logger.info(f"Using the tokenizer: {cfg.model.tokenizer}")
-    cola_data = DataModule(
-        cfg.model.tokenizer, cfg.processing.batch_size
-    )
-    cola_model = CoLAModel(
-        cfg.model.name
-    )
+    cola_data = DataModule(cfg.model.tokenizer, cfg.processing.batch_size)
+    cola_model = CoLAModel(cfg.model.name)
 
+    root_dir = hydra.utils.get_original_cwd()
     checkpoint_callback = ModelCheckpoint(
-        dirpath="./models",
-        filename="best.ckpt",
+        dirpath=f"{root_dir}/models",
+        filename="best-checkpoint",
         monitor="valid/loss",
-        mode="min"
+        mode="min",
     )
     early_stopping_callback = EarlyStopping(
         monitor="valid/loss", patience=3, verbose=True, mode="min"
     )
 
-    wandb_logger = WandbLogger(project="MLOps Basics",
-                               entity="sybaek",
-                               name="bert")
+    wandb_logger = WandbLogger(project="MLOps Basics", entity="sybaek", name="bert")
 
     trainer = pl.Trainer(
         default_root_dir="logs",
@@ -46,8 +41,7 @@ def main(cfg):
         max_epochs=cfg.training.max_epochs,
         fast_dev_run=False,
         logger=wandb_logger,
-        callbacks=[checkpoint_callback,
-                   early_stopping_callback],
+        callbacks=[checkpoint_callback, early_stopping_callback],
         log_every_n_steps=cfg.training.log_every_n_steps,
     )
 
