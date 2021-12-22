@@ -1,0 +1,5 @@
+model:
+  tokenizer: google/bert_uncased_L-2_H-128_A-2
+processing:
+  batch_size: 32
+  max_length: 128
