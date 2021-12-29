@@ -8,12 +8,18 @@ MLOps 초짜인 제가 MLOps 공부하기에 괜찮은 커리큘럼을 발견하
 
 - - -
 
-**Week 0: PyTorch Lightning** (Completed)
+**Week 0: PyTorch Lightning** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-0))
 
-**Week 1: Model monitoring - Weights and Biases** (Completed)
+**Week 1: Model monitoring - Weights and Biases** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-1))
 
-**Week 2: Configurations - Hydra** (Completed)
+**Week 2: Configurations - Hydra** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-2))
 
-**Week 3: Data Version Control - DVC** (Completed)
+**Week 3: Data Version Control - DVC** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-3))
 
-**Week 4: Model Packaging - ONNX** (Completed)
+**Week 4: Model Packaging - ONNX** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-4))
+
+**Week 5: Model Packaging - Docker** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-5))
+
+**Week 6: CI/CD - GitHub Actions** ([branch](https://github.com/L0Z1K/MLOps-Basics/tree/week-6))
+
+- - -
