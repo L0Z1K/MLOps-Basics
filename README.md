@@ -1,19 +1,15 @@
-# MLOps-Basics
+## Week 4: Model Packaging - ONNX
 
-MLOps 초짜인 제가 MLOps 공부하기에 괜찮은 커리큘럼을 발견하여 그대로 공부해보려 합니다. 
+ONNX를 이용하면 Model Dependency와 관계없이 Model을 사용할 수 있다. ONNX를 사용해서 모델을 배포할 줄 알아야 나중에 Production Level에서 실제 내 모델을 세상에 배포할 수 있을 것 같다.
 
-링크: https://github.com/graviraja/MLOps-Basics 
+### Convert model to ONNX Format
 
-매주 업데이트 되는 Commit 마다 코드가 발전되어가길 바라고 있습니다.
+```bash
+python convert_model_to_onnx.py
+```
 
-- - -
+### Inference with ONNX
 
-**Week 0: PyTorch Lightning** (Completed)
-
-**Week 1: Model monitoring - Weights and Biases** (Completed)
-
-**Week 2: Configurations - Hydra** (Completed)
-
-**Week 3: Data Version Control - DVC** (Completed)
-
-**Week 4: Model Packaging - ONNX** (Completed)
+```bash
+python infer.py
+```
