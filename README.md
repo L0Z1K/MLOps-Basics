@@ -1,19 +1,11 @@
-# MLOps-Basics
+## Week 1: Model monitoring - Weights and Biases
 
-MLOps 초짜인 제가 MLOps 공부하기에 괜찮은 커리큘럼을 발견하여 그대로 공부해보려 합니다. 
+기본적으로는 Week 0의 코드와 동일하다. Wandb Logger 붙여주고 metric 조금 추가한 정도다. Wandb로 Logging을 생활화하면 편할 것 같다. Tensorboard 사용하는 것보다..
 
-링크: https://github.com/graviraja/MLOps-Basics 
+### Train
 
-매주 업데이트 되는 Commit 마다 코드가 발전되어가길 바라고 있습니다.
+```bash
+python train.py
+```
 
-- - -
-
-**Week 0: PyTorch Lightning** (Completed)
-
-**Week 1: Model monitoring - Weights and Biases** (Completed)
-
-**Week 2: Configurations - Hydra** (Completed)
-
-**Week 3: Data Version Control - DVC** (Completed)
-
-**Week 4: Model Packaging - ONNX** (Completed)
+Wandb 결과물은 [여기](https://wandb.ai/sybaek/MLOps%20Basics/runs/1o4di8rc/overview?workspace=user-sybaek)에서 확인 가능하다.
